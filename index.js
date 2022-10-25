@@ -5,7 +5,7 @@ module.exports = (promise) => {
     res = 1;
     val = v;
   });
-  require("process")._tickCallback();
+  process._tickCallback();
   return res ? val : promise;
 };
 
@@ -17,6 +17,6 @@ module.exports.status = (promise) => {
     () => (status = "fulfilled"),
     () => (status = "rejected")
   );
-  require("process")._tickCallback();
+  process._tickCallback();
   return status ?? "pending";
 };
