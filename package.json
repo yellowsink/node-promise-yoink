@@ -1,5 +1,12 @@
 {
 	"name": "node-promise-yoink",
 	"version": "1.0.0",
-	"description": "synchronously get the value of a promise"
+	"description": "synchronously get the value of a promise",
+	"dependencies": {
+		"bindings": "^1.5.0",
+		"cmake-js": "^7.1.1"
+	},
+	"scripts": {
+		"install": "cmake-js compile"
+	}
 }
